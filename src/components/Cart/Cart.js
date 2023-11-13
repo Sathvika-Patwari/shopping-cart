@@ -20,19 +20,19 @@ const Cart = () => {
       <h2>Items</h2>
       <ul>
         {items.map((item)=>(
-            <span key = {item.id}>
+            <div key = {item.id}>
                 {item.itemName} -${item.price}
                 <button onClick={()=>addToCart(item)}>Add to Cart</button>
-            </span>
+            </div>
         ))}
       </ul>
 
       <h2>Shopping Cart</h2>
       <ul>
       {cart.map((cartItem)=>(
-        <span key={cartItem.id}>
+        <div key={cartItem.id}>
           {cartItem.itemName} - ${cartItem.price}
-        </span>
+        </div>
       ))}
       </ul>
       <h3>Total: ${totalPrice}</h3>
